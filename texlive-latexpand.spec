@@ -1,11 +1,11 @@
-# revision 27025
+# revision 31489
 # category Package
 # catalog-ctan /support/latexpand
-# catalog-date 2012-07-12 10:46:16 +0200
+# catalog-date 2013-08-21 14:31:04 +0200
 # catalog-license bsd
 # catalog-version undef
 Name:		texlive-latexpand
-Version:	20120712
+Version:	20130821
 Release:	1
 Summary:	Expand \input and \include in a LaTeX document
 Group:		Publishing
@@ -39,12 +39,16 @@ The script does not deal with \includeonly commands.
 %doc %{_texmfdistdir}/doc/support/latexpand/Makefile
 %doc %{_texmfdistdir}/doc/support/latexpand/README
 %doc %{_texmfdistdir}/doc/support/latexpand/tests/README
+%doc %{_texmfdistdir}/doc/support/latexpand/tests/df-conflict/a.tex
+%doc %{_texmfdistdir}/doc/support/latexpand/tests/df-conflict/b.tex
+%doc %{_texmfdistdir}/doc/support/latexpand/tests/df-conflict/b/README-df-conflict.txt
 %doc %{_texmfdistdir}/doc/support/latexpand/tests/foo.tex
 %doc %{_texmfdistdir}/doc/support/latexpand/tests/includer.tex
 %doc %{_texmfdistdir}/doc/support/latexpand/tests/just-comment.tex
 %doc %{_texmfdistdir}/doc/support/latexpand/tests/my-package.sty
 %doc %{_texmfdistdir}/doc/support/latexpand/tests/no-eol.tex
 %doc %{_texmfdistdir}/doc/support/latexpand/tests/package-user.tex
+%doc %{_texmfdistdir}/doc/support/latexpand/tests/text-after-end.tex
 %doc %{_texmfdistdir}/doc/support/latexpand/version.txt
 
 #-----------------------------------------------------------------------
