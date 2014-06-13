@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-latexpand
 Version:	20130821
-Release:	5
+Release:	6
 Summary:	Expand \input and \include in a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/latexpand
