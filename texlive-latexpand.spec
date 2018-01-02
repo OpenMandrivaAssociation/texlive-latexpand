@@ -1,12 +1,6 @@
-# revision 33372
-# category Package
-# catalog-ctan /support/latexpand
-# catalog-date 2014-04-04 14:16:13 +0200
-# catalog-license bsd
-# catalog-version undef
 Name:		texlive-latexpand
-Version:	20140404
-Release:	4
+Version:	1.3
+Release:	1
 Summary:	Expand \input and \include in a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/latexpand
@@ -35,23 +29,8 @@ The script does not deal with \includeonly commands.
 #-----------------------------------------------------------------------
 %files
 %{_bindir}/latexpand
-%{_texmfdistdir}/scripts/latexpand/latexpand
-%doc %{_texmfdistdir}/doc/support/latexpand/Makefile
-%doc %{_texmfdistdir}/doc/support/latexpand/README
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/README
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/df-conflict/a.tex
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/df-conflict/b.tex
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/df-conflict/b/README-df-conflict.txt
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/foo.tex
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/includegraphic.tex
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/includer.tex
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/just-comment.tex
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/my-package.sty
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/no-eol.tex
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/package-user.tex
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/smile.pdf
-%doc %{_texmfdistdir}/doc/support/latexpand/tests/text-after-end.tex
-%doc %{_texmfdistdir}/doc/support/latexpand/version.txt
+%{_texmfdistdir}/scripts/latexpand
+%doc %{_texmfdistdir}/doc/support/latexpand
 
 #-----------------------------------------------------------------------
 %prep
