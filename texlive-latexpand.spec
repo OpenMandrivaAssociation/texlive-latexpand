@@ -1,6 +1,6 @@
 Name:		texlive-latexpand
-Version:	1.41gb32a776
-Release:	3
+Version:	1.5
+Release:	1
 Summary:	Expand \input and \include in a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/latexpand
