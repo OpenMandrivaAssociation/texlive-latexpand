@@ -1,12 +1,12 @@
 Name:		texlive-latexpand
-Version:	1.5
+Version:	53109
 Release:	1
 Summary:	Expand \input and \include in a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/latexpand
 License:	BSD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexpand.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexpand.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexpand.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexpand.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -19,12 +19,12 @@ Latexpand is a Perl script that simply replaces \input and
 The script does not deal with \includeonly commands.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -34,14 +34,14 @@ The script does not deal with \includeonly commands.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/latexpand/latexpand latexpand
+ln -sf %{_texmfdistdir}/scripts/latexpand/latexpand latexpand
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
