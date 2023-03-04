@@ -1,5 +1,5 @@
 Name:		texlive-latexpand
-Version:	66132
+Version:	66229
 Release:	1
 Summary:	Expand \input and \include in a LaTeX document
 Group:		Publishing
