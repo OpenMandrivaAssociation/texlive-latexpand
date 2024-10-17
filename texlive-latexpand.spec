@@ -3,7 +3,7 @@ Version:	66229
 Release:	2
 Summary:	Expand \input and \include in a LaTeX document
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/latexpand
+URL:		https://www.ctan.org/tex-archive/support/latexpand
 License:	BSD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexpand.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexpand.doc.r%{version}.tar.xz
