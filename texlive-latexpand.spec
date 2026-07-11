@@ -1,47 +1,23 @@
-Name:		texlive-latexpand
-Version:	66229
-Release:	2
+%global tl_name latexpand
+%global tl_revision 66226
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.7.2
+Release:	%{tl_revision}.1
 Summary:	Expand \input and \include in a LaTeX document
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/support/latexpand
-License:	BSD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexpand.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexpand.doc.r%{version}.tar.xz
+License:	bsd3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/latexpand.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/latexpand.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
-Provides:	texlive-latexpand.bin = %{EVRD}
+BuildSystem:	texlive
+Requires:	texlive(latexpand.bin)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-Latexpand is a Perl script that simply replaces \input and
-\include commands with the content of the file input/included.
-The script does not deal with \includeonly commands.
+Latexpand is a Perl script that simply replaces \input and \include
+commands with the content of the input or included file. The script does
+not deal with \includeonly commands.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_bindir}/latexpand
-%{_texmfdistdir}/scripts/latexpand
-%doc %{_texmfdistdir}/doc/support/latexpand
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_bindir}
-pushd %{buildroot}%{_bindir}
-ln -sf %{_texmfdistdir}/scripts/latexpand/latexpand latexpand
-popd
-mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf-dist %{buildroot}%{_datadir}
