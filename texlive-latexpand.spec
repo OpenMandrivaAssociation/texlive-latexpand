@@ -1,5 +1,6 @@
 %global tl_name latexpand
 %global tl_revision 66226
+%global tl_bin_links latexpand:%{_texmfdistdir}/scripts/latexpand/latexpand
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -15,6 +16,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(latexpand.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 Latexpand is a Perl script that simply replaces \input and \include
